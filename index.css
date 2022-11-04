@@ -3,12 +3,9 @@ body{
     margin: 0px;
     font-family: 'Josefin Sans', sans-serif;
     background-color: gainsboro;
-
-
    background-size: cover;
     background-repeat: no-repeat;
     opacity: 80%;
-    
 }
 .headings{
     display: flex;
@@ -28,37 +25,45 @@ h1{
     
 }
 p,span{
+    
     font-size: medium;
     font-weight: 500;
     color: rgb(157, 72, 72);
 }
-input,#stockname-el{
+#stockname{
+    margin: 0px;
+}
+input{
     width: 90%;
-    border: 1px solid black;
-    margin: 10px;
     padding: 10px 10px;
     border-radius: 3px;
     font-size: medium;
     font-weight: 100;
     border: 1px solid rgb(90, 48, 142);
-    
+}
+#listbox{
 
-}
-#stockname-el{
-    width: 96%;
-}
-
-#myInput{
-    width: 90%;
-}
-.searchbar{
-    height: 100px;
-    width: 400px;
-    border: 1px solid black;
-    overflow: scroll;
-    margin: 10px 10px;
-}
-
+     min-height: 0px;
+     max-height: 100px;
+     width: 95%;
+     overflow:hidden;
+     
+ }
+ #ul-el{
+    background-color: white;
+    margin: 0px;
+     padding: 0px;
+     border: 0px;
+     margin-left: 10px;
+ }
+ #listitem{
+    color: rgb(90, 48, 142);
+    background-color: whitesmoke;
+     padding: 10px 0px;
+     border-bottom: .5px solid rgb(157, 72, 72);
+     list-style: none;
+     font-weight: 500;     
+ }
 
 #profit-loss{
     margin: 10px;
@@ -69,18 +74,16 @@ input,#stockname-el{
 
     font-weight: 700;
 }
-
 .maincontainer{
     background-color: white;
     padding: 50px 50px;
     border-radius: 5px;
     width: 400px;
-    height: 400px;
+    height: 500px;
     margin-left: 500px;
-    box-shadow: 7px 7px 7px;
+    box-shadow: 5px 7px 30px;
     
 }
-
 button{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
@@ -124,7 +127,6 @@ footer{
 .footer-icons:hover{
     color: white;
 }
-
 .footer-links{
     margin: 20px;
     text-transform: uppercase;
@@ -143,8 +145,4 @@ footer{
 #copyright{
  margin-left: 600px;    
 }
-aside{
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-}
+

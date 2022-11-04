@@ -20,11 +20,14 @@
     </div>
     <div class="maincontainer">
         <div class="content">
-                <p>STOCK NAME:
-                    <select name="select bank name" id="stockname-el">
-                        <option value="">--STOCK NAME--</option>
-                    </select>
+                <p id="stockname">SEARCH STOCK:
+                    <input id="myinput-el" type="text"  onkeyup="filterfunction()" placeholder="Search For Stocks...">
+                    <div id="listbox">
+                        <ul id="ul-el"></ul>
+                    </div>
+                   <h3 style="color: rgb(157, 72, 72);"> STOCK SELECTED : <span style="color:rgb(90, 48, 142)" id="stockname-el"></span></h3> 
                 </p>
+                
                     <span>PRICE:</span>
                     <input id="price-el" type="number">
                     <p>QUANTITY <input id="qty-el" type="number"></p>
@@ -59,7 +62,7 @@
           <br>
           <br>
           <br>
-          <a id="copyright"class="footer-links" href="">&copy; All right reserved M.S BROKINGS LTD</a>
+          <a id="copyright"class="footer-links" href="">&copy; All Right Reserve By M.S BROKINGS LTD</a>
     
 </footer>
 </body>
