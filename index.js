@@ -43,8 +43,10 @@ ltp = data.map(data =>data.lastPrice)
         myinputEl.value = `${e.path[0].innerHTML}`
         matchname = e.path[0].innerHTML
         selectedstockEl.innerHTML =  e.path[0].innerHTML
-        console.log(getprice);
-        
+        for(let i=0; i<data.length; i++){
+            if (name[i] === e.path[0].innerHTML)
+            {priceEl.value = ltp[i]}
+        }
     })   
  //cal mtm
 calEl.addEventListener("click", function(){
