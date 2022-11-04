@@ -1,12 +1,12 @@
 
-let stocknameEl = document.getElementById("ul-el")
+let ulEl = document.getElementById("ul-el")
 let priceEl = document.getElementById("price-el")
 let qtyEl = document.getElementById("qty-el")
 let mtmEl = document.getElementById("profit-loss")
 let calEl = document.getElementById("cal-el")
 let myinputEl = document.getElementById("myinput-el")
 let listitemEl = document.getElementById("listitem")
-let stockEl = document.getElementById("stockname-el")
+let selectedstockEl = document.getElementById("selectedstock-el")
 let listboxEl = document.getElementById("listbox")
 const options = {
 	method: 'GET',
@@ -23,38 +23,46 @@ let optnames = ''
 let ltp
 let name
 let findnametoprice
-let rr
+let matchname
+let getprice
 
 name = data.map(data =>data.symbol)
 ltp = data.map(data =>data.lastPrice)
  //render stock name list
-    myinputEl.addEventListener("click",()=>{for(let i=0; i<800; i++){
+    myinputEl.addEventListener("click",()=>{for(let i=0; i<data.length; i++){
         optnames = optnames + `<li id="listitem">${name[i]}</li>`;
     }
-    stocknameEl.innerHTML = optnames})
+    ulEl.innerHTML = optnames})
     // erase on mouseleave
     listboxEl.addEventListener("mouseleave",()=>{
-        stocknameEl.innerHTML = ''
+        ulEl.innerHTML = ''
     })   
     //listitem click
-    stocknameEl.addEventListener("click",(e)=>{
-        rr = e.path[0].innerHTML
-        stockEl.innerHTML =  e.path[0].innerHTML
-       
+    ulEl.addEventListener("click",(e)=>{
+        ulEl.innerHTML = ''
+        myinputEl.value = `${e.path[0].innerHTML}`
+        matchname = e.path[0].innerHTML
+        selectedstockEl.innerHTML =  e.path[0].innerHTML
+        console.log(getprice);
+        
     })   
  //cal mtm
 calEl.addEventListener("click", function(){
-    stockEl.innerHTML = ''
-    for(let i=0; i<800; i++){
-        if (name[i] === rr)
+    
+    for(let i=0; i<data.length; i++){
+        if (name[i] === matchname)
         {findnametoprice = ltp[i]}
     }
         if(((priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)) > 0){
-            mtmEl.innerHTML = `MTM IS <span style="color: green;"> + ${(priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)}</span>`
+            mtmEl.innerHTML = `MTM IS <span style="color: green;"> + ${((priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)).toFixed(2)}</span>`
         }
         else{
-            mtmEl.innerHTML = `MTM IS <span style="color: red;">  ${(priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)}</span>`
+            mtmEl.innerHTML = `MTM IS <span style="color: red;">  ${((priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)).toFixed(2)}</span>`
         }
+        selectedstockEl.innerHTML = ''
+        myinputEl.value = ''
+        priceEl.value=''
+        qtyEl.value=''
 })
 
 }).catch(()=>{console.log("error caught")})
@@ -62,10 +70,10 @@ calEl.addEventListener("click", function(){
 
 function filterfunction(){
     let filter = myinputEl.value.toUpperCase();
-    let ul = stocknameEl
+    let ul = ulEl
     let li = ul.getElementsByTagName("li")
     for(let i=0; i<800; i++){
-        let a = stocknameEl.getElementsByTagName('li')[i]
+        let a = ulEl.getElementsByTagName('li')[i]
         if(a){
             let txtvalue = a.textContent || a.innerHTML
            if(txtvalue.indexOf(filter) > -1){

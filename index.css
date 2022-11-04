@@ -42,10 +42,10 @@ input{
     border: 1px solid rgb(90, 48, 142);
 }
 #listbox{
-    
+    position: absolute;
      min-height: 0px;
-     max-height: 100px;
-     width: 96%;
+     max-height: 300px;
+     width: 26.7%;
      overflow:hidden;
      
  }
@@ -54,7 +54,7 @@ input{
     margin: 0px;
      padding: 0px;
      border: 0px;
-     margin-left: 10px;
+     margin-left: 0px;
  }
  #listitem{
     color: rgb(90, 48, 142);
@@ -79,7 +79,7 @@ input{
     padding: 50px 50px;
     border-radius: 5px;
     width: 400px;
-    height: 500px;
+    height: 370px;
     margin-left: 500px;
     box-shadow: 5px 7px 30px;
     
