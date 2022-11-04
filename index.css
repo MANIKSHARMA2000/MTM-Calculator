@@ -1,0 +1,150 @@
+body{
+    border: none;
+    margin: 0px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: gainsboro;
+
+
+   background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    
+}
+.headings{
+    display: flex;
+}
+h1{
+    color: rgb(157, 72, 72);
+    font-family: 'Josefin Sans', sans-serif;
+
+    margin: 30px;
+    
+}
+#logo{
+    margin-left: 500px;
+    margin-top: 15px;
+    height: 60px;
+    width: 60px;
+    
+}
+p,span{
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(157, 72, 72);
+}
+input,#stockname-el{
+    width: 90%;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-size: medium;
+    font-weight: 100;
+    border: 1px solid rgb(90, 48, 142);
+    
+
+}
+#stockname-el{
+    width: 96%;
+}
+
+#myInput{
+    width: 90%;
+}
+.searchbar{
+    height: 100px;
+    width: 400px;
+    border: 1px solid black;
+    overflow: scroll;
+    margin: 10px 10px;
+}
+
+
+#profit-loss{
+    margin: 10px;
+    color: rebeccapurple;
+    letter-spacing: 2px;
+    margin-left: 100px;
+    font-family: 'Josefin Sans', sans-serif;
+
+    font-weight: 700;
+}
+
+.maincontainer{
+    background-color: white;
+    padding: 50px 50px;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    margin-left: 500px;
+    box-shadow: 7px 7px 7px;
+    
+}
+
+button{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-left: 100px;
+    padding: 10px 40px;
+    border: 0.5px solid rgb(157, 72, 72);
+    border-radius: 6px;
+    background-color: rgb(157, 72, 72);
+    cursor: pointer;
+    color: white;
+}
+button:hover{
+    background-color: white;
+color: rgb(157, 72, 72);
+}
+footer{
+    align-content: center;
+    width: 100%;
+    height: 180px;
+    background-color:#252324;
+}
+#firsticon{
+    margin-left: 500px;
+}
+.footer-icons{
+    position: relative;
+    color: rgb(157, 72, 72);
+    margin-left: 100px;
+    margin: 30px;
+    
+    display: inline-block;
+}
+.footer-icons::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 200%;
+    color: #ca0101;
+}
+.footer-icons:hover{
+    color: white;
+}
+
+.footer-links{
+    margin: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(157, 72, 72);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+.footer-links:hover{
+    color: white
+}
+#firstlink{
+    margin-left: 500px;
+}
+#copyright{
+ margin-left: 600px;    
+}
+aside{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
