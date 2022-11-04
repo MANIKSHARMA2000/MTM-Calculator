@@ -42,10 +42,10 @@ input{
     border: 1px solid rgb(90, 48, 142);
 }
 #listbox{
-
+    
      min-height: 0px;
      max-height: 100px;
-     width: 95%;
+     width: 96%;
      overflow:hidden;
      
  }
