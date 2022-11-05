@@ -55,11 +55,11 @@ calEl.addEventListener("click", function(){
         if (name[i] === matchname)
         {findnametoprice = ltp[i]}
     }
-        if(((priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)) > 0){
-            mtmEl.innerHTML = `MTM IS <span style="color: green;"> + ${((priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)).toFixed(2)}</span>`
+        if(((findnametoprice * qtyEl.value)-(priceEl.value * qtyEl.value)) > 0){
+            mtmEl.innerHTML = `MTM IS <span style="color: green;"> + ${( (findnametoprice * qtyEl.value)-(priceEl.value * qtyEl.value)).toFixed(2)}</span>`
         }
         else{
-            mtmEl.innerHTML = `MTM IS <span style="color: red;">  ${((priceEl.value * qtyEl.value) - (findnametoprice * qtyEl.value)).toFixed(2)}</span>`
+            mtmEl.innerHTML = `MTM IS <span style="color: red;">  ${((findnametoprice * qtyEl.value)-(priceEl.value * qtyEl.value)).toFixed(2)}</span>`
         }
         selectedstockEl.innerHTML = ''
         myinputEl.value = ''
