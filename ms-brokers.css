@@ -8,18 +8,21 @@ body{
     opacity: 80%;
 }
 .headings{
+    min-width: 100%;
     display: flex;
+    
+    justify-content: center;
 }
 h1{
     color: rgb(157, 72, 72);
     font-family: 'Josefin Sans', sans-serif;
-
+    align-items: center;
     margin: 30px;
     
 }
 #logo{
-    margin-left: 500px;
-    margin-top: 15px;
+    
+    
     height: 60px;
     width: 60px;
     
@@ -41,12 +44,16 @@ input{
     font-weight: 100;
     border: 1px solid rgb(90, 48, 142);
 }
+input:hover{
+    background-color: gainsboro;
+}
 #listbox{
-    position: absolute;
+     position: absolute;
      min-height: 0px;
-     max-height: 300px;
+     max-height: 380px;
      width: 26.7%;
-     overflow:hidden;
+     overflow:scroll;
+     margin-top: 55px;
      
  }
  #ul-el{
@@ -58,11 +65,15 @@ input{
  }
  #listitem{
     color: rgb(90, 48, 142);
-    background-color: whitesmoke;
-     padding: 10px 0px;
+     background-color: whitesmoke;
+     padding: 10px 10px;
      border-bottom: .5px solid rgb(157, 72, 72);
      list-style: none;
-     font-weight: 500;     
+     font-weight: 500; 
+
+ }
+ #listitem:hover{
+    background-color: gainsboro;
  }
 
 #profit-loss{
@@ -75,19 +86,26 @@ input{
     font-weight: 700;
 }
 .maincontainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.content{
     background-color: white;
     padding: 50px 50px;
     border-radius: 5px;
     width: 400px;
-    height: 370px;
-    margin-left: 500px;
+    min-height: 370px;
     box-shadow: 5px 7px 30px;
-    
+    display: flex;
+    flex-direction: column;
 }
 button{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
-    margin-left: 100px;
+    
     padding: 10px 40px;
     border: 0.5px solid rgb(157, 72, 72);
     border-radius: 6px;
@@ -99,50 +117,58 @@ button:hover{
     background-color: white;
 color: rgb(157, 72, 72);
 }
-footer{
-    align-content: center;
+.footer{
     width: 100%;
-    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color:#252324;
+    min-height: fit-content;
+    flex-direction: column;
+
 }
-#firsticon{
-    margin-left: 500px;
+.icons{
+    display: flex;
+    justify-content: center;
+}
+.links{
+    display: flex;
+    justify-content: center;
 }
 .footer-icons{
-    position: relative;
     color: rgb(157, 72, 72);
     margin-left: 100px;
     margin: 30px;
     
-    display: inline-block;
-}
-.footer-icons::after{
-    content: "";
-    position: absolute;
-    display: block;
-    height: 10px;
-    width: 200%;
-    color: #ca0101;
 }
 .footer-icons:hover{
     color: white;
 }
 .footer-links{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     margin: 20px;
     text-transform: uppercase;
     text-decoration: none;
     color: rgb(157, 72, 72);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-
 }
 .footer-links:hover{
     color: white
 }
-#firstlink{
-    margin-left: 500px;
+.copyright{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
 }
-#copyright{
- margin-left: 600px;    
+@media only screen and (max-width: 510px) {
+    .footer{
+       flex-direction: row;
+    }
+    .icons{
+        flex-direction: column;
+    }
+    .links{
+        flex-direction: column;
+    }
 }
-
