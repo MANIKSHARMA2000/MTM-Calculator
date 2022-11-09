@@ -75,20 +75,23 @@ input:hover{
     background-color: gainsboro;
 }
 #listbox{
-     position: absolute;
-     min-height: 0px;
-     max-height: 380px;
-     width: 26.7%;
-     overflow:scroll;
-     margin-top: 55px;
-     
- }
- #ul-el{
+    position: absolute;
+    min-height: 0px;
+    max-height: 380px;
+    width: 380px;
+    overflow:scroll;
+    margin-top: 55px;
+    
+}
+#ul-el{
+    display: flex;
+    flex-wrap: wrap;
     background-color: white;
     margin: 0px;
      padding: 0px;
      border: 0px;
      margin-left: 0px;
+     
  }
  #listitem{
     color: rgb(90, 48, 142);
@@ -97,6 +100,7 @@ input:hover{
      border-bottom: .5px solid rgb(157, 72, 72);
      list-style: none;
      font-weight: 500; 
+     width: 100%;
 
  }
  #listitem:hover{
