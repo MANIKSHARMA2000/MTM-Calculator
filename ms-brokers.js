@@ -18,14 +18,13 @@
 }
 //fetch data
 fetch('https://latest-stock-price.p.rapidapi.com/any', options)
-.then(response => response.json())
+.then(response =>response.json())
 .then(data => {console.log(data);//log data
 let optnames = ''
 let ltp
 let name
 let findnametoprice
 let matchname
-let getprice
 
 name = data.map(data =>data.symbol)
 ltp = data.map(data =>data.lastPrice)
@@ -72,7 +71,7 @@ calEl.addEventListener("click", function(){
 document.body.style.backgroundColor = "red"
 })
 
-
+var count = 0
 function filterfunction(){
     let filter = myinputEl.value.toUpperCase();
     let ul = ulEl
