@@ -68,7 +68,9 @@ calEl.addEventListener("click", function(){
         qtyEl.value=''
 })
 
-}).catch(()=>{console.log("error caught")})
+}).catch(()=>{console.log("error caught")
+document.body.style.backgroundColor = "red"
+})
 
 
 function filterfunction(){
