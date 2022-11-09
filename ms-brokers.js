@@ -1,14 +1,15 @@
 
-let ulEl = document.getElementById("ul-el")
-let priceEl = document.getElementById("price-el")
-let qtyEl = document.getElementById("qty-el")
-let mtmEl = document.getElementById("profit-loss")
-let calEl = document.getElementById("cal-el")
-let myinputEl = document.getElementById("myinput-el")
-let listitemEl = document.getElementById("listitem")
-let selectedstockEl = document.getElementById("selectedstock-el")
-let listboxEl = document.getElementById("listbox")
-const options = {
+    let ulEl = document.getElementById("ul-el")
+    let priceEl = document.getElementById("price-el")
+    let qtyEl = document.getElementById("qty-el")
+    let mtmEl = document.getElementById("profit-loss")
+    let calEl = document.getElementById("cal-el")
+    let myinputEl = document.getElementById("myinput-el")
+    let listitemEl = document.getElementById("listitem")
+    let selectedstockEl = document.getElementById("selectedstock-el")
+    let listboxEl = document.getElementById("listbox")
+
+    const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '3da147d207msh81549da6e4e8910p10a44ajsn1bcc5dcf03bb',
